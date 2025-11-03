@@ -132,10 +132,10 @@
 
 @layer utilities {
   .name {
-    @apply font-covered text-4xl text-brand-primary;
+    @apply font-covered text-4xl text-foreground;
   }
   .name-morse-code {
-    @apply text-sm text-gray-400;
+    @apply text-sm text-black dark:text-white/50;
   }
   .designation {
     @apply font-forum text-base;

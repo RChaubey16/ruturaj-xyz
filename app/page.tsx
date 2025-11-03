@@ -23,14 +23,23 @@ export default function Home() {
             className="object-cover rounded-sm"
           />
         </div>
-        <div className="my-8 flex items-center gap-2">
-          <div className="w-26 h-26 bg-gray-400 rounded-full"></div>
-          <div className="">
-            <p className="mb-0.5 name-morse-code">{data.nameInMorseCode}</p>
-            <p className="name">{data.name}</p>
-            <p className="designation">Open Source Contributor</p>
+        <div className="mt-8 flex items-center gap-2">
+          <div className="relative w-26 h-26 rounded-full">
+            <Image
+              src="/images/profile.jpg"
+              fill
+              alt="banner"
+              className="object-cover rounded-full"
+            />
           </div>
+          <div className="">
+            <p className="name">{data.name}</p>
+            <p className="mb-0.5 w-fit name-morse-code">{data.nameInMorseCode}</p>
+          </div>
+
+          
         </div>
+        <p>I build fast, interactive front-ends with React, TypeScript, and Next.js, and solid back-ends powered by Node.js, Go, and Drupal — all with a focus on performance, clarity, and maintainability.</p>
       </div>
 
       {/* Tech Logo Component */}
