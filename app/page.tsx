@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import Tech from "./components/Tech";
 
 const data = {
   name: "Ruturaj",
@@ -9,7 +10,10 @@ const data = {
 export default function Home() {
   return (
     <div className="bg-background">
+      {/* Navbar Component */}
       <Navbar />
+
+      {/* Profile Component */}
       <div className="">
         <div className="relative w-full h-56">
           <Image
@@ -27,6 +31,16 @@ export default function Home() {
             <p className="designation">Open Source Contributor</p>
           </div>
         </div>
+      </div>
+
+      {/* Tech Logo Component */}
+      <div className="flex items-center gap-1">
+        <Tech />
+        <Tech />
+        <Tech />
+        <Tech />
+        <Tech />
+        <Tech />
       </div>
     </div>
   );
