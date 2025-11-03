@@ -130,7 +130,6 @@
   }
 }
 
-
 @layer utilities {
   .name {
     @apply font-covered text-4xl text-brand-primary;

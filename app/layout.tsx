@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Covered_By_Your_Grace, Montserrat, Forum } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; 
+import { ThemeProvider } from "@/app/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,11 +42,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${coveredByYourGrace.variable} ${montserrat.variable} ${forum.variable} antialiased max-w-4xl mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} ${coveredByYourGrace.variable} ${montserrat.variable} ${forum.variable} antialiased max-w-4xl mx-auto px-4 lg:px-0`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
