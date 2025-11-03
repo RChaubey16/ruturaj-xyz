@@ -44,6 +44,8 @@
 
   --color-brand-primary: var(--brand-primary);
   --font-covered: var(--font-covered-by-your-grace);
+  --font-montserrat: var(--font-montserrat);
+  --font-forum: var(--font-forum);
 }
 
 :root {
@@ -135,5 +137,8 @@
   }
   .name-morse-code {
     @apply text-sm text-gray-400;
+  }
+  .designation {
+    @apply font-forum text-base;
   }
 }
