@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Covered_By_Your_Grace, Montserrat, Forum } from "next/font/google";
+import { Covered_By_Your_Grace, Montserrat, Forum } from "next/font/google";
 import "./globals.css"; 
 import { ThemeProvider } from "@/app/components/ThemeProvider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const coveredByYourGrace = Covered_By_Your_Grace({
   weight: '400',
@@ -44,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${coveredByYourGrace.variable} ${montserrat.variable} ${forum.variable} antialiased max-w-4xl mx-auto px-4 lg:px-0`}
+        className={`${coveredByYourGrace.variable} ${montserrat.variable} ${forum.variable} antialiased max-w-3xl mx-auto px-4 lg:px-0`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

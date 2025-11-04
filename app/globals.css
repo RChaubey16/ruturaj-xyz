@@ -43,6 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   --color-brand-primary: var(--brand-primary);
+  --color-para: var(--dusty-gray);
   --font-covered: var(--font-covered-by-your-grace);
   --font-montserrat: var(--font-montserrat);
   --font-forum: var(--font-forum);
@@ -83,6 +84,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --brand-primary: red;
+  --dusty-gray: #949494;
 }
 
 .dark {
@@ -119,6 +121,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 
   --brand-primary: green;
+  --dusty-gray: #949494;
 }
 
 @layer base {
@@ -127,6 +130,15 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .heading {
+    @apply font-montserrat font-bold text-2xl;
+  }
+  .para-text {
+    @apply font-montserrat text-base leading-7 text-gray-600 dark:text-para;
+  }
+  .link-text {
+    @apply font-montserrat text-base underline text-black/90 dark:text-white/90 underline-offset-3;
   }
 }
 
@@ -139,5 +151,22 @@
   }
   .designation {
     @apply font-forum text-base;
+  }
+  .accordion-header {
+    @apply flex justify-between font-montserrat font-semibold !text-lg hover:no-underline;
+
+    .company {
+      @apply font-montserrat text-lg font-semibold text-gray-800 dark:text-white;
+    }
+
+    .role,
+    .duration,
+    .location {
+      @apply font-montserrat text-sm font-normal text-gray-600 dark:text-para;
+    }
+
+    .location {
+      @apply text-gray-600 dark:text-para;
+    }
   }
 }
