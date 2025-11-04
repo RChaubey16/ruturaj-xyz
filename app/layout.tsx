@@ -40,6 +40,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
+          <footer className="mb-22 text-center">
+            <p className="para-text">© Ruturaj Chaubey | 2025</p>
+
+          </footer>
         </ThemeProvider>
       </body>
     </html>

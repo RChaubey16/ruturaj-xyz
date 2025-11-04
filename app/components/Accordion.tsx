@@ -71,7 +71,7 @@ export function AccordionComponent() {
       defaultValue="item-1"
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger className="accordion-header group">
+        <AccordionTrigger className="accordion-header cursor-pointer group">
           <div className="flex gap-4">
             <div>
               <Image
@@ -107,7 +107,7 @@ export function AccordionComponent() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger className="accordion-header group">
+        <AccordionTrigger className="accordion-header cursor-pointer group">
           <div className="flex gap-4">
             <div>
               <Image
@@ -142,7 +142,7 @@ export function AccordionComponent() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger className="accordion-header group">
+        <AccordionTrigger className="accordion-header cursor-pointer group">
           <div className="flex gap-4">
             <div>
               <Image
