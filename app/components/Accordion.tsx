@@ -64,12 +64,7 @@ const tech = [
 
 export function AccordionComponent() {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-full"
-      defaultValue="item-1"
-    >
+    <Accordion type="multiple" className="w-full" defaultValue={["item-1"]}>
       <AccordionItem value="item-1">
         <AccordionTrigger className="accordion-header cursor-pointer group">
           <div className="flex gap-4">
