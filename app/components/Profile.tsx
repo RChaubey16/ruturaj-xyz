@@ -1,5 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import TechUsed from "./TechUsed";
+
+// Types
+
+type Stack = {
+  name: string;
+  href: string;
+};
+
 const data = {
   name: "Ruturaj",
   nameInMorseCode: ".-. ..- - ..- .-. .- .---",
@@ -14,11 +23,38 @@ const techStacks = [
   { name: "Drupal", href: "#" },
 ];
 
+const tech = [
+  {
+    name: "GitHub",
+    href: "https://github.com/RChaubey16",
+    logoSrc: "/images/socials/github-logo.png",
+    darkLogoSrc: "/images/socials/github-logo.png",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/ruturaj-chaubey-b453b41b1",
+    logoSrc: "/images/socials/linkedin-logo.png",
+    darkLogoSrc: "/images/socials/linkedin-logo.png",
+  },
+  {
+    name: "X (Twitter)",
+    href: "https://x.com/RChaubey16",
+    logoSrc: "/images/socials/x-logo.png",
+    darkLogoSrc: "/images/socials/x-logo.png",
+  },
+  {
+    name: "Drupal",
+    href: "https://www.drupal.org/u/ruturaj-chaubey",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+  },
+];
+
 const Profile = () => {
   const frontendStacks = techStacks.slice(0, 3);
   const backendStacks = techStacks.slice(3);
 
-  const renderStackLinks = (stacks) =>
+  const renderStackLinks = (stacks: Stack[]) =>
     stacks.map((stack, index) => (
       <span key={stack.name}>
         <Link href={stack.href} className="link-text">
@@ -28,7 +64,7 @@ const Profile = () => {
       </span>
     ));
   return (
-    <div className="">
+    <div className="mb-20">
       <div className="relative w-full h-56">
         <Image
           src="https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg"
@@ -57,6 +93,7 @@ const Profile = () => {
         {renderStackLinks(backendStacks)} — all with a focus on performance,
         clarity, and maintainability.
       </p>
+      <TechUsed tech={tech} />
     </div>
   );
 };

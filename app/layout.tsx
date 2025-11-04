@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
 import { Covered_By_Your_Grace, Montserrat, Forum } from "next/font/google";
-import "./globals.css"; 
+import "./globals.css";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
+import Navbar from "./components/Navbar";
 
 const coveredByYourGrace = Covered_By_Your_Grace({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-covered-by-your-grace',
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-covered-by-your-grace",
 });
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
-})
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
+});
 
 const forum = Forum({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-forum',
-})
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-forum",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,6 +38,7 @@ export default function RootLayout({
         className={`${coveredByYourGrace.variable} ${montserrat.variable} ${forum.variable} antialiased max-w-3xl mx-auto px-4 lg:px-0`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

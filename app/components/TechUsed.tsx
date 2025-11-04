@@ -1,13 +1,25 @@
 import TechCard from "./TechCard";
 
-const TechUsed = ({ tech = [] }) => {
+type TechItem = {
+  name: string;
+  href: string;
+  logoSrc: string;
+  darkLogoSrc: string;
+};
+
+type TechUsedProps = {
+  text?: string;
+  tech?: TechItem[];
+};
+
+const TechUsed = ({ text, tech = [] }: TechUsedProps) => {
   return (
     <div className="mt-2">
-      <span className="font-semibold text-black dark:text-white">
-        Tech used:
-      </span>
+      {text && (
+        <span className="font-semibold text-black dark:text-white">{text}</span>
+      )}
       <div className="flex items-center gap-2">
-        {tech.map((item) => (
+        {tech.map((item: TechItem) => (
           <TechCard
             key={item.name}
             name={item.name}
