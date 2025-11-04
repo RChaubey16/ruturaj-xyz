@@ -18,7 +18,7 @@ const TechUsed = ({ text, tech = [] }: TechUsedProps) => {
       {text && (
         <span className="font-semibold text-black dark:text-white">{text}</span>
       )}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap">
         {tech.map((item: TechItem) => (
           <TechCard
             key={item.name}

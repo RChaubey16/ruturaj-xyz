@@ -66,7 +66,7 @@ export function AccordionComponent() {
   return (
     <Accordion type="multiple" className="w-full" defaultValue={["item-1"]}>
       <AccordionItem value="item-1">
-        <AccordionTrigger className="accordion-header cursor-pointer group">
+        <AccordionTrigger className="accordion-header cursor-pointer group flex flex-col md:flex-row">
           <div className="flex gap-4">
             <div>
               <Image
@@ -83,7 +83,7 @@ export function AccordionComponent() {
             </div>
           </div>
 
-          <div className="w-48 flex gap-4 justify-between">
+          <div className="w-full md:w-48 flex gap-4 justify-between">
             <div>
               <p className="duration">May 2023 - Present</p>
               <p className="location">Pune, India</p>
@@ -102,7 +102,7 @@ export function AccordionComponent() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger className="accordion-header cursor-pointer group">
+        <AccordionTrigger className="accordion-header cursor-pointer group flex flex-col md:flex-row">
           <div className="flex gap-4">
             <div>
               <Image
@@ -119,7 +119,7 @@ export function AccordionComponent() {
             </div>
           </div>
 
-          <div className="w-48 flex gap-4 justify-between">
+          <div className="w-full md:w-48 flex gap-4 justify-between">
             <div>
               <p className="duration">May 2022 - April 2023</p>
               <p className="location">Pune, India</p>
@@ -137,7 +137,7 @@ export function AccordionComponent() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger className="accordion-header cursor-pointer group">
+        <AccordionTrigger className="accordion-header cursor-pointer group flex flex-col md:flex-row">
           <div className="flex gap-4">
             <div>
               <Image
@@ -154,7 +154,7 @@ export function AccordionComponent() {
             </div>
           </div>
 
-          <div className="w-48 flex gap-4 justify-between">
+          <div className="w-full md:w-48 flex gap-4 justify-between">
             <div>
               <p className="duration">August 2021 - April 2022</p>
               <p className="location">Pune, India</p>

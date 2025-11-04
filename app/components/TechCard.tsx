@@ -25,6 +25,7 @@ const TechCard = ({
   return (
     <Link
       href={href}
+      target="_blank"
       className="w-fit flex items-center gap-2 p-2 border border-gray-300 dark:border-gray-700 rounded-md hover:shadow-md transition-shadow duration-200"
     >
       <div className="relative w-5 h-5">
