@@ -6,6 +6,61 @@ import {
 } from "@/components/ui/accordion";
 import { ChevronDownIcon } from "lucide-react";
 import Image from "next/image";
+import TechUsed from "./TechUsed";
+
+const experience = {
+  full_stack_engineer: [
+    "Architected and led the front-end development for a UNICEF-affiliated product using Next.js, focusing on performance, scalability, and clean UX.",
+    "Explored and implemented AI technologies, building proof-of-concept applications to strengthen understanding of applied AI and emerging trends.",
+    "Led a web development internship program, training and mentoring fresh graduates into industry-ready full stack engineers.",
+    "Conducted internal technical sessions, demonstrating Headless Drupal starter kits like Octahedriod to enhance the team’s technical proficiency.",
+    "Contributed to Drupal Open Source, delivering code solutions and improvements for community-reported issues.",
+  ],
+  associate_engineer: [
+    "Developed and deployed a full-featured e-commerce platform for a U.S.-based client using Drupal Commerce and Gatsby.",
+    "Optimized performance across the stack, cutting page load times by 25% through improved caching, build optimization, and API tuning.",
+    "Engineered robust integrations between Gatsby and Drupal Commerce, enabling seamless data synchronization across product listings.",
+    "Led internal training sessions on React and Headless Drupal architecture, upskilling the team on modern web development practices.",
+  ],
+  intern: [
+    "Integrated React with Drupal CMS to enhance content workflows and elevate overall site interactivity.",
+    "Contributed patches to the Drupal Open Source community and participated in strategic development initiatives.",
+    "Developed hands-on expertise in Drupal CMS (module and theme development), Headless Drupal, and working with REST and JSON APIs.",
+  ],
+};
+
+const tech = [
+  {
+    name: "React",
+    href: "https://react.dev",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
+  },
+  {
+    name: "Next.js",
+    href: "https://nextjs.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+    darkLogoSrc: "/images/tech/nextjs-dark-icon.png",
+  },
+  {
+    name: "TypeScript",
+    href: "https://www.typescriptlang.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+  },
+  {
+    name: "Tailwind",
+    href: "https://tailwindcss.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+  },
+  {
+    name: "Drupal",
+    href: "https://www.drupal.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+  },
+];
 
 export function AccordionComponent() {
   return (
@@ -43,15 +98,12 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
-          <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
-          </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and experts.
-          </p>
+          <TechUsed tech={tech} />
+          <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
+            {experience.full_stack_engineer.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
@@ -82,15 +134,11 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
-          <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
-          </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and experts.
-          </p>
+          <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
+            {experience.associate_engineer.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
@@ -121,15 +169,11 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
-          <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
-          </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and experts.
-          </p>
+          <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
+            {experience.intern.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
