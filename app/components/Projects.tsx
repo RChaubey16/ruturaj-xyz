@@ -254,13 +254,17 @@ const Projects = ({ useSlice = true }) => {
       </div>
 
       {useSlice && (
-        <div className="mt-4 flex justify-center">
-          <Button variant="outline">
-            <Link href={"/builds"} className="flex items-center gap-2">
+        <div className="mt-8 flex justify-center">
+          <Link href={"/builds"} className="">
+            <Button
+              variant="outline"
+              size={'lg'}
+              className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
+            >
               More Builds
               <ArrowUpRight />
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       )}
     </section>

@@ -42,7 +42,6 @@ export default function RootLayout({
           {children}
           <footer className="my-22 text-center">
             <p className="para-text">© Ruturaj Chaubey | 2025</p>
-
           </footer>
         </ThemeProvider>
       </body>
