@@ -34,6 +34,7 @@ export interface ProjectImage {
 
 export interface ProjectData {
   id: string;
+  type: string;
   image: { src: string; alt: string };
   status: { text: string; className: string };
   title: string;

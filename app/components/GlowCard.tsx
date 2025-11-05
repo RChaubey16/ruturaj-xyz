@@ -9,7 +9,7 @@ import { GithubIcon } from "@sanity/icons";
 import { GlowCardProps } from "@/types/project";
 
 const GlowCard = ({ project }: GlowCardProps) => {
-  const { image, status, title, description, techStack, links } = project;
+  const { image, status, title, description, techStack, links, type } = project;
 
   return (
     <div className="w-full h-full">
@@ -42,12 +42,14 @@ const GlowCard = ({ project }: GlowCardProps) => {
             <p className="para-text leading-6 line-clamp-3">{description}</p>
 
             {/* Tech Stack */}
-            <div className="mt-4">
-              <p className="mb-1 tech-stack-label">Tech Stack:</p>
-              <div className="flex gap-2">
-                <Tech size={8} tech={techStack} />
+            {type === "tech" && (
+              <div className="mt-4">
+                <p className="mb-1 tech-stack-label">Tech Stack:</p>
+                <div className="flex gap-2">
+                  <Tech size={8} tech={techStack} />
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Links */}
             <div className="mt-5 flex gap-2.5 justify-end">

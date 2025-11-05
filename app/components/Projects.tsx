@@ -7,6 +7,7 @@ import { ProjectData } from "@/types/project";
 export const projects: ProjectData[] = [
   {
     id: "glow-up",
+    type: "tech",
     image: {
       src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
       alt: "banner",
@@ -44,6 +45,7 @@ export const projects: ProjectData[] = [
   },
   {
     id: "ai-chat",
+    type: "tech",
     image: {
       src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
       alt: "AI Chatbot Dashboard",
@@ -101,6 +103,7 @@ export const projects: ProjectData[] = [
   },
   {
     id: "weatherflow",
+    type: "tech",
     image: {
       src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
       alt: "Weather Dashboard",
@@ -148,6 +151,7 @@ export const projects: ProjectData[] = [
   },
   {
     id: "taskify",
+    type: "tech",
     image: {
       src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
       alt: "Task Management App",
@@ -195,6 +199,7 @@ export const projects: ProjectData[] = [
   },
   {
     id: "insightdash",
+    type: "tech",
     image: {
       src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
       alt: "Analytics Dashboard",
