@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Tooltip } from "react-tooltip";
 import { useTheme } from "next-themes";
 
-const tech = [
+const technologies = [
   {
     id: "typescript",
     tech: "TypeScript",
@@ -238,7 +238,7 @@ const tech = [
   },
 ];
 
-const Tech = () => {
+const Tech = ({ tech = technologies }) => {
   const { theme, systemTheme } = useTheme();
 
   // Determine the current theme
@@ -250,7 +250,7 @@ const Tech = () => {
       {tech.map((item, index) => (
         <div key={index}>
           <Link href={item.techHref} id={item.id}>
-            <div className="relative w-10 h-10">
+            <div className={`relative w-8 h-8`}>
               <Image
                 src={isDarkMode ? item.imageUrl.dark : item.imageUrl.light}
                 fill

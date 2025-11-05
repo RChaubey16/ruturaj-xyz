@@ -1,70 +1,82 @@
-"use client";
-
-import { useEffect } from "react";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import Tech from "./Tech";
+import { Button } from "@/components/ui/button";
+import { Globe } from "lucide-react";
+import Link from "next/link";
+import { GithubIcon } from "@sanity/icons";
 
 const GlowCard = () => {
-  useEffect(() => {
-    const all = document.querySelectorAll(".spotlight-card");
-
-    const handleMouseMove = (ev: MouseEvent) => {
-      all.forEach((e) => {
-        const blob = e.querySelector(".blob") as HTMLElement;
-        const fblob = e.querySelector(".fake-blob") as HTMLElement;
-
-        if (!blob || !fblob) return;
-
-        const rec = fblob.getBoundingClientRect();
-
-        blob.style.opacity = "1";
-
-        blob.animate(
-          [
-            {
-              transform: `translate(${
-                ev.clientX - rec.left - rec.width / 2
-              }px, ${ev.clientY - rec.top - rec.height / 2}px)`,
-            },
-          ],
-          {
-            duration: 300,
-            fill: "forwards",
-          }
-        );
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   return (
     <div className="h-max">
-      <div className="spotlight-card group bg-border relative overflow-hidden rounded-xl p-px transition-all duration-300 ease-in-out">
-        <Card className="group-hover:bg-card/90 border-none transition-all duration-300 ease-in-out group-hover:backdrop-blur-[20px] p-2 py-4">
-          <CardHeader className="p-0">
-            <div className="relative w-full h-32">
+      <div className="spotlight-card bg-border relative overflow-hidden rounded-xl p-px">
+        <Card className="project-card group-hover:bg-card/90 border-none  p-0 gap-2.5">
+          <CardHeader className="relative p-0">
+            <div className="relative w-full h-48">
               <Image
                 src="https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg"
                 fill
                 alt="banner"
-                className="object-cover rounded-sm"
+                className="object-cover rounded-md"
               />
             </div>
-            <CardTitle>Hover for the Glow-Up</CardTitle>
+            <div className="absolute top-2 right-2 px-3 py-1 flex items-center gap-2 rounded-sm bg-green-300/20 text-green-900">
+              <div className="w-2 h-2 bg-green-700 rounded-full" />
+              <p className="text-green-600">Completed</p>
+            </div>
+            <CardTitle className="py-2 px-4 title rounded-t-xl">
+              Hover for the Glow-Up
+            </CardTitle>
           </CardHeader>
-          <CardContent className="p-0">
+          <CardContent className="p-0 px-4 pb-4">
             Glide your cursor here and watch magic unfold — an experience
             designed just for you.
+            <div className="mt-4">
+              <p>Tech Stack:</p>
+              <div className="flex gap-2">
+                <Tech
+                  tech={[
+                    {
+                      id: "go",
+                      tech: "Go",
+                      techHref: "https://go.dev",
+                      imageUrl: {
+                        light: "https://icon.icepanel.io/Technology/svg/Go.svg",
+                        dark: "https://icon.icepanel.io/Technology/svg/Go.svg",
+                      },
+                      imageAltText: "Go lang logo",
+                    },
+                    {
+                      id: "python",
+                      tech: "Python",
+                      techHref: "https://www.python.org",
+                      imageUrl: {
+                        light:
+                          "https://icon.icepanel.io/Technology/svg/Python.svg",
+                        dark: "https://icon.icepanel.io/Technology/svg/Python.svg",
+                      },
+                      imageAltText: "Python logo",
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+            <div className="mt-5 flex justify-end">
+              <Link href={"#"}>
+                <Button variant="ghost" className="cursor-pointer">
+                  GitHub
+                  <GithubIcon />
+                </Button>
+              </Link>
+              <Link href={"#"}>
+                <Button variant="ghost" className="cursor-pointer">
+                  <Globe />
+                  Demo
+                </Button>
+              </Link>
+            </div>
           </CardContent>
         </Card>
-        <div className="blob absolute top-0 left-0 h-20 w-20 rounded-full bg-sky-600/60 opacity-0 blur-2xl transition-all duration-300 ease-in-out dark:bg-sky-400/60" />
-        <div className="fake-blob absolute top-0 left-0 h-20 w-20 rounded-full" />
       </div>
     </div>
   );
