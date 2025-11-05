@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Tooltip } from "react-tooltip";
@@ -238,30 +239,47 @@ const technologies = [
   },
 ];
 
-const Tech = ({ tech = technologies }) => {
+const Tech = ({ tech = technologies, size = 10 }) => {
   const { theme, systemTheme } = useTheme();
-
-  // Determine the current theme
   const currentTheme = theme === "system" ? systemTheme : theme;
   const isDarkMode = currentTheme === "dark";
+  const uniquePrefix = useId();
 
   return (
     <>
-      {tech.map((item, index) => (
-        <div key={index}>
-          <Link href={item.techHref} id={item.id}>
-            <div className={`relative w-8 h-8`}>
-              <Image
-                src={isDarkMode ? item.imageUrl.dark : item.imageUrl.light}
-                fill
-                alt={item.imageAltText}
-                className="object-contain"
-              />
-            </div>
-          </Link>
-          <Tooltip anchorSelect={`#${item.id}`} content={item.tech} />
-        </div>
-      ))}
+      {tech.map((item) => {
+        const uniqueId = `${uniquePrefix}-${item.id}`;
+
+        return (
+          <div key={uniqueId} className="relative">
+            <Link href={item.techHref} id={uniqueId}>
+              <div
+                style={{
+                  width: `${size * 4}px`,
+                  height: `${size * 4}px`,
+                }}
+                className="relative"
+              >
+                <Image
+                  src={isDarkMode ? item.imageUrl.dark : item.imageUrl.light}
+                  fill
+                  alt={item.imageAltText}
+                  className="object-contain"
+                />
+              </div>
+            </Link>
+
+            <Tooltip
+              anchorSelect={`#${uniqueId}`}
+              content={item.tech}
+              place="top"
+              positionStrategy="fixed" // forces tooltip to calculate from viewport
+              offset={8} // keeps spacing consistent
+              delayShow={100} // avoids hydration flicker
+            />
+          </div>
+        );
+      })}
     </>
   );
 };

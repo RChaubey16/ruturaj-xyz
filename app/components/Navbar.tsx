@@ -9,7 +9,7 @@ const Navbar = () => {
           <Link href={'#experience'}>Experience</Link>
         </li>
         <li>
-          <Link href={'#builds'}>Builds</Link>
+          <Link href={'/builds'}>Builds</Link>
         </li>
         <li>
           <DarkModeToggle />

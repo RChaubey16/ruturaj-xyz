@@ -171,8 +171,40 @@
   }
 
   .project-card {
+    .status {
+      @apply font-montserrat text-sm font-medium;
+    }
+    .status-bg {
+      @apply absolute top-2 right-2 px-3 py-1 flex items-center gap-2 rounded-sm;
+    }
+    .status-completed {
+      @apply bg-green-500/20 text-green-900;
+
+      .dot {
+        @apply bg-green-700;
+      }
+
+      .status {
+        @apply text-green-500/70;
+      }
+    }
+    .status-in-progress {
+      @apply bg-yellow-500/20 text-yellow-900;
+
+      .dot {
+        @apply bg-yellow-600;
+      }
+
+      .status {
+        @apply text-yellow-500/70;
+      }
+    }
+
     .title {
-      @apply  font-montserrat text-xl font-semibold text-foreground;
+      @apply font-montserrat text-xl font-semibold leading-7 text-foreground;
+    }
+    .tech-stack-label {
+      @apply font-montserrat text-sm font-bold text-black/50 dark:text-white/60;
     }
   }
 }
