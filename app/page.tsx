@@ -17,7 +17,9 @@ export default function Home() {
         <Projects />
         <Gallery />
         <Blogs />
-        <ContactForm />
+        <div className="my-20">
+          <ContactForm />
+        </div>
 
         {/* Tech Stack Component */}
         <div className="my-20 flex flex-wrap items-center gap-2">

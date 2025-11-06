@@ -53,21 +53,26 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    toast("You submitted the following values:", {
-      description: (
-        <pre className="bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4">
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "bottom-right",
-      classNames: {
-        content: "flex flex-col gap-2",
-      },
-      style: {
-        "--border-radius": "calc(var(--radius) + 4px)",
-      } as React.CSSProperties,
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    // Use RESEND to send mail
+    const res = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: data.email,
+        name: data.title,
+        mailBody: data.description,
+      }),
     });
+
+    const result = await res.json();
+
+    if (!result.data.data && result.data.error) {
+      toast("Unable to send your message, something went wrong");
+    } else {
+      toast("Your message was sent");
+    }
+    form.reset();
   }
 
   return (
@@ -118,7 +123,7 @@ export function ContactForm() {
                     autoComplete="email"
                   />
                   <FieldDescription>
-                    We'll only use this to contact you if we need more info.
+                    {"We'll only use this to contact you if we need more info."}
                   </FieldDescription>
                   {fieldState.invalid && (
                     <FieldError errors={[fieldState.error]} />
@@ -162,7 +167,12 @@ export function ContactForm() {
       </CardContent>
       <CardFooter>
         <Field orientation="horizontal">
-          <Button type="button" variant="outline" onClick={() => form.reset()} className="cursor-pointer">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => form.reset()}
+            className="cursor-pointer"
+          >
             Reset
           </Button>
           <Button type="submit" form="form-rhf-demo" className="cursor-pointer">

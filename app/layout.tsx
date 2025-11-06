@@ -3,6 +3,7 @@ import { Covered_By_Your_Grace, Montserrat, Forum } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import Navbar from "./components/Navbar";
+import { Toaster } from "sonner";
 
 const coveredByYourGrace = Covered_By_Your_Grace({
   weight: "400",
@@ -40,6 +41,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
+          <Toaster theme="dark" position="top-right" />
           <footer className="my-22 text-center">
             <p className="para-text">© Ruturaj Chaubey | 2025</p>
           </footer>
