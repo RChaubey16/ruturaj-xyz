@@ -1,19 +1,17 @@
-import { client } from "@/lib/sanity"
-
 export const revalidate = 60 // ISR (optional)
 
 export default async function BlogPage() {
-  const posts = await client.fetch(`*[_type == "post"]{
-    _id,
-    title,
-    author->{ name }
-  }`)
+  // const posts = await client.fetch(`*[_type == "post"]{
+  //   _id,
+  //   title,
+  //   author->{ name }
+  // }`)
 
   return (
     <main className="max-w-3xl mx-auto p-4">
       <h1 className="text-2xl font-semibold mb-4">Blog Page</h1>
 
-      {posts.length === 0 && (
+      {/* {posts.length === 0 && (
         <p className="text-gray-500">No posts yet.</p>
       )}
 
@@ -28,7 +26,7 @@ export default async function BlogPage() {
             )}
           </article>
         ))}
-      </div>
+      </div> */}
     </main>
   )
 }
