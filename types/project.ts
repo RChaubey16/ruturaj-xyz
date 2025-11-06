@@ -39,7 +39,11 @@ export interface ProjectData {
   status: { text: string; className: string };
   title: string;
   description: string;
-  techStack: TechItem[];
+  techStack?: TechItem[];
+  blogCategories?: {
+    id: string;
+    category: string;
+  }[];
   links: {
     label: string;
     href: string;
@@ -50,7 +54,7 @@ export interface ProjectData {
       | "destructive"
       | "secondary"
       | "ghost";
-    icon: "GithubIcon" | "Globe" | string;
+    icon: "GithubIcon" | "Globe" | "Read" | string;
   }[];
 }
 

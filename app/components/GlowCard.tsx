@@ -2,14 +2,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Tech from "./Tech";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { ArrowRight, Globe } from "lucide-react";
 import Link from "next/link";
 import { GithubIcon } from "@sanity/icons";
 // Types
 import { GlowCardProps } from "@/types/project";
+import { Badge } from "@/components/ui/badge";
 
 const GlowCard = ({ project }: GlowCardProps) => {
-  const { image, status, title, description, techStack, links, type } = project;
+  const {
+    image,
+    status,
+    title,
+    description,
+    techStack,
+    blogCategories,
+    links,
+    type,
+  } = project;
 
   return (
     <div className="w-full h-full">
@@ -39,7 +49,7 @@ const GlowCard = ({ project }: GlowCardProps) => {
           </CardHeader>
 
           <CardContent className="p-0 px-4 pb-4">
-            <p className="para-text leading-6 line-clamp-3">{description}</p>
+            <p className="para-text leading-6 line-clamp-4">{description}</p>
 
             {/* Tech Stack */}
             {type === "tech" && (
@@ -50,11 +60,23 @@ const GlowCard = ({ project }: GlowCardProps) => {
                 </div>
               </div>
             )}
+            {/* Tech Stack */}
+            {type === "blogs" && (
+              <div className="mt-4 flex gap-2">
+                <div className="flex gap-2 flex-wrap">
+                  {blogCategories?.map((item, index) => (
+                    <Badge key={index} variant="secondary" className="text-gray-500 dark:text-gray-400">
+                      {item.category}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Links */}
             <div className="mt-5 flex gap-2.5 justify-end">
               {links.map((link) => (
-                <Link key={link.label} href={link.href}>
+                <Link key={link.label} href={link.href} target="_blank">
                   <Button variant={link.variant} className="cursor-pointer">
                     {link.icon === "GithubIcon" ? (
                       <>
@@ -64,7 +86,7 @@ const GlowCard = ({ project }: GlowCardProps) => {
                     ) : (
                       <>
                         {link.label}
-                        <Globe />
+                        {link.icon === "Read" ? <ArrowRight /> : <Globe />}
                       </>
                     )}
                   </Button>
