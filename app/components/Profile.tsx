@@ -23,7 +23,7 @@ const techStacks = [
   { name: "Drupal", href: "#" },
 ];
 
-const tech = [
+const socials = [
   {
     name: "GitHub",
     href: "https://github.com/RChaubey16",
@@ -64,7 +64,7 @@ const Profile = () => {
       </span>
     ));
   return (
-    <div className="mb-20">
+    <div className="pt-20 mb-20">
       <div className="relative w-full h-56">
         <Image
           src="https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg"
@@ -73,7 +73,7 @@ const Profile = () => {
           className="object-cover rounded-sm"
         />
       </div>
-      <div className="mt-8 flex items-center gap-2">
+      <div className="mt-8 flex items-center gap-4">
         <div className="relative w-26 h-26 rounded-full">
           <Image
             src="/images/profile.jpg"
@@ -83,17 +83,17 @@ const Profile = () => {
           />
         </div>
         <div className="">
-          <p className="name">{data.name}</p>
           <p className="mb-0.5 w-fit name-morse-code">{data.nameInMorseCode}</p>
+          <p className="name">{data.name}</p>
         </div>
       </div>
-      <p className="mt-2 mb-6 para-text">
+      <p className="mt-4 mb-6 para-text">
         I build fast, interactive front-ends with{" "}
         {renderStackLinks(frontendStacks)} and solid back-ends powered by{" "}
         {renderStackLinks(backendStacks)} — all with a focus on performance,
         clarity, and maintainability.
       </p>
-      <TechUsed tech={tech} />
+      <TechUsed tech={socials} />
     </div>
   );
 };

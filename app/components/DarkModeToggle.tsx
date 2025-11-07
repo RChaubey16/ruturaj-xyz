@@ -1,6 +1,6 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
+import { Moon, SunMedium } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef } from 'react';
 
@@ -26,7 +26,7 @@ export function DarkModeToggle() {
 
   return (
     <button onClick={toggle} className="p-1 rounded-full border border-ring">
-      {isDark ? <Sun /> : <Moon />}
+      {isDark ? <SunMedium /> : <Moon />}
     </button>
   );
 }

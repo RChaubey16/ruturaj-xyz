@@ -129,6 +129,7 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
+          <TechUsed tech={tech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.associate_engineer.map((item, index) => (
               <li key={index}>{item}</li>
@@ -164,6 +165,7 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
+          <TechUsed tech={tech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.intern.map((item, index) => (
               <li key={index}>{item}</li>

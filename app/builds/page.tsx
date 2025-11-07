@@ -3,7 +3,7 @@ import Projects from "../components/Projects";
 
 export default function BuildsPage() {
   return (
-    <section className="bg-background">
+    <section className="pt-10 bg-background">
       <Fade>
         <Projects useSlice={false} />
       </Fade>
