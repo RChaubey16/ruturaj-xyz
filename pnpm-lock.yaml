@@ -68,6 +68,9 @@ importers:
       react-hook-form:
         specifier: ^7.66.0
         version: 7.66.0(react@19.2.0)
+      react-keyquence:
+        specifier: ^1.0.3
+        version: 1.0.3(react@19.2.0)
       react-tooltip:
         specifier: ^5.30.0
         version: 5.30.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -5114,6 +5117,11 @@ packages:
 
   react-is@19.2.0:
     resolution: {integrity: sha512-x3Ax3kNSMIIkyVYhWPyO09bu0uttcAIoecO/um/rKGQ4EltYWVYtyiGkS/3xMynrbVQdS69Jhlv8FXUEZehlzA==}
+
+  react-keyquence@1.0.3:
+    resolution: {integrity: sha512-CzlKav9lDqV2ZrViXmCoVL69Vd45m6GeWLHm5xJnR+Dh0OaTGA+tyXMduHyMlnVY8rnnoK7C1LrDFRaoPG9ooA==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
 
   react-refractor@4.0.0:
     resolution: {integrity: sha512-2VMRH3HA/Nu+tMFzyQwdBK0my0BIZy1pkWHhjuSrplMyf8ZLx/Gw7tUXV0t2JbEsbSNHbEc9TbHhq3sUx2seVA==}
@@ -11805,6 +11813,10 @@ snapshots:
   react-is@16.13.1: {}
 
   react-is@19.2.0: {}
+
+  react-keyquence@1.0.3(react@19.2.0):
+    dependencies:
+      react: 19.2.0
 
   react-refractor@4.0.0(react@19.2.0):
     dependencies:

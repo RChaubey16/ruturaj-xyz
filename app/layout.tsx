@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Covered_By_Your_Grace, Montserrat, Forum } from "next/font/google";
-import { ThemeProvider } from "@/app/components/ThemeProvider";
-import KeySequenceListener from "./components/KeySequenceListener";
-import Navbar from "./components/Navbar";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "@/app/components/ThemeProvider";
+import KeyquenceComponent from "./components/KeyquenceComponent";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 const coveredByYourGrace = Covered_By_Your_Grace({
@@ -40,7 +40,7 @@ export default function RootLayout({
         className={`${coveredByYourGrace.variable} ${montserrat.variable} ${forum.variable} antialiased max-w-3xl mx-auto px-4 lg:px-0`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <KeySequenceListener />
+          <KeyquenceComponent />
           <Navbar />
           {children}
           <Toaster theme="dark" position="top-right" />
