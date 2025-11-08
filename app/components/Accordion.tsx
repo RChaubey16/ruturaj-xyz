@@ -31,25 +31,102 @@ const experience = {
 
 const tech = [
   {
-    name: "React",
-    href: "https://react.dev",
-    logoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
-    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
-  },
-  {
     name: "Next.js",
     href: "https://nextjs.org",
     logoSrc: "https://icon.icepanel.io/Technology/svg/Next.js.svg",
     darkLogoSrc: "/images/tech/nextjs-dark-icon.png",
   },
   {
-    name: "TypeScript",
-    href: "https://www.typescriptlang.org",
+    name: "Tailwind CSS",
+    href: "https://tailwindcss.com",
     logoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
     darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
   },
   {
-    name: "Tailwind",
+    id: "sass-lang",
+    name: "Sass",
+    href: "https://sass-lang.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Sass.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Sass.svg",
+  },
+  {
+    name: "Drupal",
+    href: "https://www.drupal.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+  },
+  {
+    name: "PHP",
+    href: "https://www.php.net",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/PHP.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/PHP.svg",
+  },
+  {
+    name: "Fast API",
+    href: "https://fastapi.tiangolo.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+  },
+  {
+    name: "Python",
+    href: "https://www.python.org",
+
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Python.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Python.svg",
+  },
+  {
+    name: "Supabase",
+    href: "https://supabase.com",
+    logoSrc: "/images/tech/supabase.png",
+    darkLogoSrc: "/images/tech/supabase.png",
+  },
+  {
+    name: "Postman",
+    href: "https://postman.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Postman.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Postman.svg",
+  },
+  {
+    name: "Figma",
+    href: "https://www.figma.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Figma.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Figma.svg",
+  },
+  {
+    name: "Cloudflare",
+    href: "https://www.cloudflare.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+  },
+  {
+    name: "Vercel",
+    href: "https://www.vercel.com",
+    logoSrc: "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+    darkLogoSrc: "/images/tech/vercel-light.png",
+  },
+];
+
+const associateTech = [
+  {
+    name: "React",
+    href: "https://react.dev",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
+  },
+  {
+    name: "Redux",
+    href: "https://redux.js.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Redux.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Redux.svg",
+  },
+  {
+    name: "Gatsby",
+    href: "https://www.gatsbyjs.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Gatsby.svg",
+  },
+  {
+    name: "Tailwind CSS",
     href: "https://tailwindcss.com",
     logoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
     darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
@@ -59,6 +136,57 @@ const tech = [
     href: "https://www.drupal.org",
     logoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
     darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+  },
+  {
+    name: "PHP",
+    href: "https://www.php.net",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/PHP.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/PHP.svg",
+  },
+  {
+    name: "MySQL",
+    href: "https://www.mysql.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+  },
+  {
+    name: "GraphQL",
+    href: "https://graphql.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
+  },
+  {
+    name: "Figma",
+    href: "https://www.figma.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Figma.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Figma.svg",
+  },
+];
+
+const internTech = [
+  {
+    name: "Drupal",
+    href: "https://www.drupal.org",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
+  },
+  {
+    name: "PHP",
+    href: "https://www.php.net",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/PHP.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/PHP.svg",
+  },
+  {
+    name: "React",
+    href: "https://react.dev",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/React.svg",
+  },
+  {
+    name: "Figma",
+    href: "https://www.figma.com",
+    logoSrc: "https://icon.icepanel.io/Technology/svg/Figma.svg",
+    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Figma.svg",
   },
 ];
 
@@ -129,7 +257,7 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
-          <TechUsed tech={tech} />
+          <TechUsed tech={associateTech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.associate_engineer.map((item, index) => (
               <li key={index}>{item}</li>
@@ -165,7 +293,7 @@ export function AccordionComponent() {
         </AccordionTrigger>
 
         <AccordionContent className="flex flex-col gap-4 para-text">
-          <TechUsed tech={tech} />
+          <TechUsed tech={internTech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.intern.map((item, index) => (
               <li key={index}>{item}</li>

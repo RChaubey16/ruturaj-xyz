@@ -58,6 +58,16 @@ const technologies = [
     imageAltText: "PHP logo",
   },
   {
+    id: "fast-api",
+    tech: "Fast API",
+    techHref: "https://fastapi.tiangolo.com",
+    imageUrl: {
+      light: "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+      dark: "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
+    },
+    imageAltText: "Fast API logo",
+  },
+  {
     id: "nodejs",
     tech: "Node.js",
     techHref: "https://nodejs.org",
@@ -106,6 +116,16 @@ const technologies = [
       dark: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
     },
     imageAltText: "Tailwind CSS logo",
+  },
+  {
+    id: "sass-lang",
+    tech: "Sass",
+    techHref: "https://sass-lang.com",
+    imageUrl: {
+      light: "https://icon.icepanel.io/Technology/svg/Sass.svg",
+      dark: "https://icon.icepanel.io/Technology/svg/Sass.svg",
+    },
+    imageAltText: "Sass logo",
   },
   {
     id: "shadcnui",
@@ -168,6 +188,16 @@ const technologies = [
     imageAltText: "MongoDB logo",
   },
   {
+    id: "supabase",
+    tech: "Supabase",
+    techHref: "https://supabase.com",
+    imageUrl: {
+      light: "/images/tech/supabase.svg",
+      dark: "/images/tech/supabase.svg",
+    },
+    imageAltText: "Supabase logo",
+  },
+  {
     id: "drupal",
     tech: "Drupal",
     techHref: "https://www.drupal.org",
@@ -218,6 +248,16 @@ const technologies = [
     imageAltText: "Git logo",
   },
   {
+    id: "postman",
+    tech: "Postman",
+    techHref: "https://postman.com",
+    imageUrl: {
+      light: "https://icon.icepanel.io/Technology/svg/Postman.svg",
+      dark: "https://icon.icepanel.io/Technology/svg/Postman.svg",
+    },
+    imageAltText: "Postman logo",
+  },
+  {
     id: "figma",
     tech: "Figma",
     techHref: "https://www.figma.com",
@@ -226,6 +266,26 @@ const technologies = [
       dark: "https://icon.icepanel.io/Technology/svg/Figma.svg",
     },
     imageAltText: "Figma logo",
+  },
+  {
+    id: "vercel",
+    tech: "Vercel",
+    techHref: "https://www.vercel.com",
+    imageUrl: {
+      light: "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+      dark: "/images/tech/vercel-light.png",
+    },
+    imageAltText: "Vercel logo",
+  },
+  {
+    id: "cloudflare",
+    tech: "Cloudflare",
+    techHref: "https://www.cloudflare.com",
+    imageUrl: {
+      light: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+      dark: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg",
+    },
+    imageAltText: "Cloudflare logo",
   },
   {
     id: "claude",

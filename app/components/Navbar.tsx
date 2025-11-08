@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DarkModeToggle } from "./DarkModeToggle";
-import { Sun } from "lucide-react";
+import { Github, Sun } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -15,6 +15,11 @@ const Navbar = () => {
         </li>
         <li className="nav-link">
           <Link href={"/builds"}>Builds</Link>
+        </li>
+        <li className="nav-link">
+          <Link href={"https://github.com/RChaubey16"}>
+            <Github />
+          </Link>
         </li>
         <li>
           <DarkModeToggle />
