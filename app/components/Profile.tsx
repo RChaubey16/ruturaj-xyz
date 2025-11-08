@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FileUser, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import TechUsed from "./TechUsed";
 
 // Types
@@ -94,6 +96,29 @@ const Profile = () => {
         clarity, and maintainability.
       </p>
       <TechUsed tech={socials} />
+
+      <div className="border-t border-black/30 dark:border-gray-600 pt-4 mt-4 flex gap-4">
+        <Link href={"/builds"} className="">
+          <Button
+            variant="default"
+            size={"default"}
+            className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
+          >
+            Get In Touch
+            <Send />
+          </Button>
+        </Link>
+        <Link href={"/resume"} className="">
+          <Button
+            variant="outline"
+            size={"default"}
+            className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
+          >
+            My Resume
+           <FileUser />
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
