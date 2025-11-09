@@ -69,8 +69,8 @@ importers:
         specifier: ^7.66.0
         version: 7.66.0(react@19.2.0)
       react-keyquence:
-        specifier: ^1.0.3
-        version: 1.0.3(react@19.2.0)
+        specifier: ^1.0.4
+        version: 1.0.4(react@19.2.0)
       react-tooltip:
         specifier: ^5.30.0
         version: 5.30.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -5118,8 +5118,8 @@ packages:
   react-is@19.2.0:
     resolution: {integrity: sha512-x3Ax3kNSMIIkyVYhWPyO09bu0uttcAIoecO/um/rKGQ4EltYWVYtyiGkS/3xMynrbVQdS69Jhlv8FXUEZehlzA==}
 
-  react-keyquence@1.0.3:
-    resolution: {integrity: sha512-CzlKav9lDqV2ZrViXmCoVL69Vd45m6GeWLHm5xJnR+Dh0OaTGA+tyXMduHyMlnVY8rnnoK7C1LrDFRaoPG9ooA==}
+  react-keyquence@1.0.4:
+    resolution: {integrity: sha512-/YLoaoZfqJgjPQ6bCJVHGCm5TKNu3yaPSTxohFBeAcjzPVk9rRFtUkuyRgYNE3m7yu2l/0cHDogQlq1hmYBzkw==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
@@ -11814,7 +11814,7 @@ snapshots:
 
   react-is@19.2.0: {}
 
-  react-keyquence@1.0.3(react@19.2.0):
+  react-keyquence@1.0.4(react@19.2.0):
     dependencies:
       react: 19.2.0
 

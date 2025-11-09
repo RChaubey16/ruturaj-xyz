@@ -97,7 +97,7 @@ const Profile = () => {
       </p>
       <div className="md:border-t border-black/30 dark:border-gray-600 pt-4 mt-4 flex flex-col md:flex-row md:items-center justify-between">
         <div className="mt-2 mb-5 pb-5 md:mb-0 md:pb-0 flex gap-4 border-b md:border-none border-black/30 dark:border-gray-600">
-          <Link href={"/builds"} className="">
+          <Link href={"/contact"} target="_blank">
             <Button
               variant="default"
               size={"default"}

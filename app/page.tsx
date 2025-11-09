@@ -5,21 +5,16 @@ import Tech from "./components/Tech";
 import Gallery from "./components/Gallery";
 import Fade from "@/components/animation/Fade";
 import Blogs from "./components/Blogs";
-import { ContactForm } from "./components/ContactForm";
 
 export default function Home() {
   return (
     <section className="bg-background">
       <Fade>
-        {/* Profile Component */}
         <Profile />
         <Experience />
         <Projects />
         <Gallery />
         <Blogs />
-        <div className="my-20">
-          <ContactForm />
-        </div>
 
         {/* Tech Stack Component */}
         <div className="my-20 flex flex-wrap items-center gap-2">
