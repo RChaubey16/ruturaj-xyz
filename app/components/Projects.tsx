@@ -6,65 +6,17 @@ import { ProjectData } from "@/types/project";
 
 export const projects: ProjectData[] = [
   {
-    id: "glow-up",
+    id: "react-kequence",
     type: "tech",
     image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-      alt: "banner",
+      src: "/images/projects/react-keyquence.png",
+      alt: "React keyquence npm home page",
     },
     status: { text: "Completed", className: "status-completed" },
-    title: "Hover for the Glow-Up",
+    title: "React Keyquence",
     description:
-      "Glide your cursor here and watch magic unfold — an experience designed just for you.",
+      "A lightweight React component library that listens for keyboard sequences and triggers callbacks. Perfect for adding Easter eggs to your React applications!",
     techStack: [
-      {
-        id: "go",
-        tech: "Go",
-        techHref: "https://go.dev",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Go.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Go.svg",
-        },
-        imageAltText: "Go lang logo",
-      },
-      {
-        id: "python",
-        tech: "Python",
-        techHref: "https://www.python.org",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Python.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Python.svg",
-        },
-        imageAltText: "Python logo",
-      },
-    ],
-    links: [
-      { label: "GitHub", href: "#", variant: "outline", icon: "GithubIcon" },
-      { label: "Demo", href: "#", variant: "default", icon: "Globe" },
-    ],
-  },
-  {
-    id: "ai-chat",
-    type: "tech",
-    image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-      alt: "AI Chatbot Dashboard",
-    },
-    status: { text: "In Progress", className: "status-in-progress" },
-    title: "ConversAI — Smart Chatbot",
-    description:
-      "ConversAI is an AI-powered chatbot that learns from user interactions and provides contextual, human-like responses using OpenAI’s GPT models.",
-    techStack: [
-      {
-        id: "nextjs",
-        tech: "Next.js",
-        techHref: "https://nextjs.org",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-        },
-        imageAltText: "Next.js logo",
-      },
       {
         id: "typescript",
         tech: "TypeScript",
@@ -76,43 +28,181 @@ export const projects: ProjectData[] = [
         imageAltText: "TypeScript logo",
       },
       {
-        id: "openai",
-        tech: "OpenAI API",
-        techHref: "https://platform.openai.com",
+        id: "react",
+        tech: "React",
+        techHref: "https://react.dev",
         imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/OpenAI.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/OpenAI.svg",
+          light: "https://icon.icepanel.io/Technology/svg/React.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/React.svg",
         },
-        imageAltText: "OpenAI logo",
+        imageAltText: "React logo",
       },
     ],
     links: [
       {
         label: "GitHub",
-        href: "#",
+        href: "https://github.com/RChaubey16/react-keyquence",
         variant: "outline",
         icon: "GithubIcon",
       },
       {
-        label: "Demo",
-        href: "#",
+        label: "Package",
+        href: "https://www.npmjs.com/package/react-keyquence",
         variant: "default",
         icon: "Globe",
       },
     ],
   },
   {
-    id: "weatherflow",
+    id: "name-my-variable",
     type: "tech",
     image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-      alt: "Weather Dashboard",
+      src: "/images/projects/name-my-variable.png",
+      alt: "Name my variable home page",
     },
     status: { text: "Completed", className: "status-completed" },
-    title: "WeatherFlow — Real-time Weather App",
+    title: "Name My Variable",
     description:
-      "A visually stunning weather dashboard that provides real-time forecasts and climate insights powered by OpenWeather API.",
+      "A Visual Studio Code extension that helps developers write more readable code by suggesting meaningful variable and function names.",
     techStack: [
+      {
+        id: "typescript",
+        tech: "TypeScript",
+        techHref: "https://www.typescriptlang.org",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+        },
+        imageAltText: "TypeScript logo",
+      },
+      {
+        id: "gemini",
+        tech: "Gemini",
+        techHref: "https://gemini.google.com/",
+        imageUrl: {
+          light: "/images/tech/gemini-icon.png",
+          dark: "/images/tech/gemini-icon.png",
+        },
+        imageAltText: "Gemini logo",
+      },
+      {
+        id: "vs-code",
+        tech: "VS Code",
+        techHref: "https://code.visualstudio.com/",
+        imageUrl: {
+          light:
+            "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-%28VS-Code%29.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-%28VS-Code%29.svg",
+        },
+        imageAltText: "VS code logo",
+      },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/RChaubey16/name-my-variable",
+        variant: "outline",
+        icon: "GithubIcon",
+      },
+      {
+        label: "Extension",
+        href: "https://marketplace.visualstudio.com/items?itemName=RuturajChaubey.name-my-variable",
+        variant: "default",
+        icon: "Globe",
+      },
+    ],
+  },
+  {
+    id: "tts",
+    type: "tech",
+    image: {
+      src: "/images/projects/text-to-translate.png",
+      alt: "Text to translate app home page",
+    },
+    status: { text: "In Progress", className: "status-in-progress" },
+    title: "Text to Speech",
+    description:
+      "A lightweight web app that lets users translate text between multiple languages and instantly hear the results through text-to-speech (TTS) playback.",
+    techStack: [
+      {
+        id: "javascript",
+        tech: "JavaScript",
+        techHref: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+        },
+        imageAltText: "JavaScript logo",
+      },
+      {
+        id: "google-cloud",
+        tech: "Google Cloud",
+        techHref: "https://console.cloud.google.com/",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/Google-Cloud.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/Google-Cloud.svg",
+        },
+        imageAltText: "Google cloud logo",
+      },
+      {
+        id: "vercel",
+        tech: "Vercel",
+        techHref: "https://www.vercel.com",
+        imageUrl: {
+          light:
+            "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
+          dark: "/images/tech/vercel-light.png",
+        },
+        imageAltText: "Vercel logo",
+      },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/RChaubey16/tts-translate-app",
+        variant: "outline",
+        icon: "GithubIcon",
+      },
+      {
+        label: "Demo",
+        href: "https://tts-translate-app-orcin.vercel.app/",
+        variant: "default",
+        icon: "Globe",
+      },
+    ],
+  },
+  {
+    id: "dev-connector",
+    type: "tech",
+    image: {
+      src: "/images/projects/devconnector.png",
+      alt: "Dev connector home page",
+    },
+    status: { text: "Completed", className: "status-completed" },
+    title: "DevConnector",
+    description:
+      "A social networking platform for developers that enables devs to create profiles, share posts, and connect with other developers.",
+    techStack: [
+      {
+        id: "javascript",
+        tech: "JavaScript",
+        techHref: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+        },
+        imageAltText: "JavaScript logo",
+      },
+      {
+        id: "nodejs",
+        tech: "Node.js",
+        techHref: "https://nodejs.org",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+        },
+        imageAltText: "Node.js logo",
+      },
       {
         id: "react",
         tech: "React",
@@ -124,111 +214,67 @@ export const projects: ProjectData[] = [
         imageAltText: "React logo",
       },
       {
-        id: "tailwind",
+        id: "redux",
+        tech: "Redux",
+        techHref: "https://redux.js.org",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/Redux.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/Redux.svg",
+        },
+        imageAltText: "Redux logo",
+      },
+      {
+        id: "tailwindcss",
         tech: "Tailwind CSS",
         techHref: "https://tailwindcss.com",
         imageUrl: {
           light: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
           dark: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
         },
-        imageAltText: "Tailwind logo",
+        imageAltText: "Tailwind CSS logo",
       },
       {
-        id: "node",
-        tech: "Node.js",
-        techHref: "https://nodejs.org",
+        id: "mongodb",
+        tech: "MongoDB",
+        techHref: "https://www.mongodb.com",
         imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Node.js.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+          light: "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
         },
-        imageAltText: "Node.js logo",
+        imageAltText: "MongoDB logo",
+      },
+      {
+        id: "postman",
+        tech: "Postman",
+        techHref: "https://postman.com",
+        imageUrl: {
+          light: "https://icon.icepanel.io/Technology/svg/Postman.svg",
+          dark: "https://icon.icepanel.io/Technology/svg/Postman.svg",
+        },
+        imageAltText: "Postman logo",
       },
     ],
     links: [
-      { label: "GitHub", href: "#", variant: "outline", icon: "GithubIcon" },
-      { label: "Demo", href: "#", variant: "default", icon: "Globe" },
+      {
+        label: "GitHub",
+        href: "https://github.com/RChaubey16/DevConnector",
+        variant: "outline",
+        icon: "GithubIcon",
+      },
     ],
   },
   {
-    id: "taskify",
+    id: "dev-toolkit",
     type: "tech",
     image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-      alt: "Task Management App",
+      src: "/images/projects/dev-toolkit.png",
+      alt: "Dev toolkit npm package home page",
     },
     status: { text: "Completed", className: "status-completed" },
-    title: "Taskify — Team Productivity Tracker",
+    title: "Dev Toolkit",
     description:
-      "A minimal, intuitive task management platform to organize sprints, assign priorities, and track team productivity.",
+      "A compact library offering a set of handy utility functions, designed to simplify common development tasks and improve code efficiency.",
     techStack: [
-      {
-        id: "vue",
-        tech: "Vue.js",
-        techHref: "https://vuejs.org",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
-        },
-        imageAltText: "Vue logo",
-      },
-      {
-        id: "firebase",
-        tech: "Firebase",
-        techHref: "https://firebase.google.com",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Firebase.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Firebase.svg",
-        },
-        imageAltText: "Firebase logo",
-      },
-      {
-        id: "sass",
-        tech: "Sass",
-        techHref: "https://sass-lang.com",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Sass.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Sass.svg",
-        },
-        imageAltText: "Sass logo",
-      },
-    ],
-    links: [
-      { label: "GitHub", href: "#", variant: "outline", icon: "GithubIcon" },
-      { label: "Demo", href: "#", variant: "default", icon: "Globe" },
-    ],
-  },
-  {
-    id: "insightdash",
-    type: "tech",
-    image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-      alt: "Analytics Dashboard",
-    },
-    status: { text: "Completed", className: "status-completed" },
-    title: "InsightDash — Analytics Dashboard",
-    description:
-      "A full-featured analytics dashboard to visualize KPIs and metrics using Recharts and Next.js, optimized for performance and responsiveness.",
-    techStack: [
-      {
-        id: "nextjs",
-        tech: "Next.js",
-        techHref: "https://nextjs.org",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-        },
-        imageAltText: "Next.js logo",
-      },
-      {
-        id: "recharts",
-        tech: "Recharts",
-        techHref: "https://recharts.org",
-        imageUrl: {
-          light: "https://icon.icepanel.io/Technology/svg/Recharts.svg",
-          dark: "https://icon.icepanel.io/Technology/svg/Recharts.svg",
-        },
-        imageAltText: "Recharts logo",
-      },
       {
         id: "typescript",
         tech: "TypeScript",
@@ -241,8 +287,18 @@ export const projects: ProjectData[] = [
       },
     ],
     links: [
-      { label: "GitHub", href: "#", variant: "outline", icon: "GithubIcon" },
-      { label: "Demo", href: "#", variant: "default", icon: "Globe" },
+      {
+        label: "GitHub",
+        href: "https://github.com/RChaubey16/dev-utils-toolkit",
+        variant: "outline",
+        icon: "GithubIcon",
+      },
+      {
+        label: "Package",
+        href: "https://www.npmjs.com/package/dev-utils-toolkit",
+        variant: "default",
+        icon: "Globe",
+      },
     ],
   },
 ];
@@ -263,7 +319,7 @@ const Projects = ({ useSlice = true }) => {
           <Link href={"/builds"} className="">
             <Button
               variant="outline"
-              size={'lg'}
+              size={"lg"}
               className="flex items-center gap-2 cursor-pointer transition-all ease-in-out duration-200 hover:gap-4"
             >
               More Builds

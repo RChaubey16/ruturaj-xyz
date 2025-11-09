@@ -37,10 +37,10 @@ const GlowCard = ({ project }: GlowCardProps) => {
             </div>
 
             {/* Status */}
-            <div className={`status-bg ${status.className}`}>
+            {/* <div className={`status-bg ${status.className}`}>
               <div className="dot w-2 h-2 rounded-full" />
               <p className="status">{status.text}</p>
-            </div>
+            </div> */}
 
             {/* Title */}
             <CardTitle className="py-2 px-4 title rounded-t-xl">
