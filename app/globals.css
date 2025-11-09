@@ -211,3 +211,28 @@
     }
   }
 }
+
+@layer components {
+  .hidden-slide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .slide-up {
+    animation: slideUp 1.2s ease-out forwards;
+  }
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
