@@ -1,43 +1,77 @@
 import { Button } from "@/components/ui/button";
+import { client } from "@/lib/sanity";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const images = [
-  {
-    url: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-    alt: "banner",
-  },
-  {
-    url: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-    alt: "banner",
-  },
-  {
-    url: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-    alt: "banner",
-  },
-  {
-    url: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-    alt: "banner",
-  },
-];
+interface ImageItem {
+  _key: string;
+  _type: string;
+  alt?: string;
+  url: string;
+}
 
-const Gallery = ({ photos = images, useButton = true }) => {
+interface GalleryItem {
+  _id: string;
+  images: ImageItem[];
+}
+
+const Gallery = async ({ useButton = true }) => {
+  const gallery: GalleryItem[] = await client.fetch(`
+      *[_type == "gallery"] {
+        _id,
+        images[] {
+          _key,
+          _type,
+          alt,
+          "url": asset->url
+        }
+      }
+    `);
+
+  const photos =
+    gallery[0]?.images?.map((item) => ({
+      url: item.url,
+      alt: item.alt || "",
+    })) ?? [];
+
   return (
     <section id="gallery" className="my-22">
       <h1 className="mb-2 heading">Gallery</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {photos.map((photo, index) => (
-          <div key={index} className="relative w-full h-48">
-            <Image
-              src={photo.url}
-              alt={photo.alt}
-              fill
-              className="object-cover rounded-sm"
-            />
+
+      {useButton ? (
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {photos.slice(0, 4).map((photo, index) => (
+              <div key={index} className="relative w-full h-48">
+                <Image
+                  src={photo.url}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover rounded-sm"
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      ) : (
+        <div className="grid grid-cols-1 gap-4">
+          {photos.map((photo, index) => (
+            <div key={index} className="mb-8">
+              <div className="relative w-full h-96">
+                <Image
+                  src={photo.url}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover rounded-sm"
+                />
+              </div>
+              <p className="mt-2 para-text text-center">{photo.alt}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
       {useButton && (
         <div className="mt-8 flex justify-center">
           <Link href={"/gallery"} className="">
