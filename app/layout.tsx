@@ -45,7 +45,7 @@ export default function RootLayout({
           {children}
           <Toaster theme="dark" position="top-right" />
           <footer className="my-22 text-center">
-            <p className="para-text">© Ruturaj Chaubey | 2025</p>
+            <p className="para-text">Ruturaj Chaubey © 2025. All rights reserved.</p>
           </footer>
         </ThemeProvider>
       </body>
