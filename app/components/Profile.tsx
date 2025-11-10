@@ -3,54 +3,15 @@ import Link from "next/link";
 import { FileUser, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TechUsed from "./TechUsed";
+import config from "../../data/config.json";
 
 // Types
-
 type Stack = {
   name: string;
   href: string;
 };
 
-const data = {
-  name: "Ruturaj",
-  nameInMorseCode: ".-. ..- - ..- .-. .- .---",
-};
-
-const techStacks = [
-  { name: "TypeScript", href: "#" },
-  { name: "Next.js", href: "#" },
-  { name: "React", href: "#" },
-  { name: "Go", href: "#" },
-  { name: "Node.js", href: "#" },
-  { name: "Drupal", href: "#" },
-];
-
-const socials = [
-  {
-    name: "GitHub",
-    href: "https://github.com/RChaubey16",
-    logoSrc: "/images/socials/github-logo.png",
-    darkLogoSrc: "/images/socials/github-logo.png",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ruturaj-chaubey-b453b41b1",
-    logoSrc: "/images/socials/linkedin-logo.png",
-    darkLogoSrc: "/images/socials/linkedin-logo.png",
-  },
-  {
-    name: "X (Twitter)",
-    href: "https://x.com/RChaubey16",
-    logoSrc: "/images/socials/x-logo.png",
-    darkLogoSrc: "/images/socials/x-logo.png",
-  },
-  {
-    name: "Drupal",
-    href: "https://www.drupal.org/u/ruturaj-chaubey",
-    logoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-    darkLogoSrc: "https://icon.icepanel.io/Technology/svg/Drupal.svg",
-  },
-];
+const { name, nameInMorseCode, techStacks, socials } = config.profile;
 
 const Profile = () => {
   const frontendStacks = techStacks.slice(0, 3);
@@ -85,8 +46,8 @@ const Profile = () => {
           />
         </div>
         <div className="">
-          <p className="mb-0.5 w-fit name-morse-code">{data.nameInMorseCode}</p>
-          <p className="name">{data.name}</p>
+          <p className="mb-0.5 w-fit name-morse-code">{nameInMorseCode}</p>
+          <p className="name">{name}</p>
         </div>
       </div>
       <p className="mt-4 mb-6 para-text">

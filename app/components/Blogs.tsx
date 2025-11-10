@@ -1,7 +1,7 @@
 import { ProjectData } from "@/types/project";
 import GlowCard from "./GlowCard";
 
-export const projects: ProjectData[] = [
+export const blogsData: ProjectData[] = [
   {
     id: "drupalcon-singapore-2024",
     type: "blogs",
@@ -89,13 +89,13 @@ export const projects: ProjectData[] = [
 ];
 
 const Blogs = ({ useSlice = true }) => {
-  const visibleProjects = useSlice ? projects.slice(0, 4) : projects;
+  const visibleProjects = useSlice ? blogsData.slice(0, 4) : blogsData;
   return (
     <section id="builds" className="mt-20">
       <h1 className="heading">Blogs</h1>
       <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {visibleProjects.map((proj) => (
-          <GlowCard key={proj.id} project={proj} />
+        {visibleProjects.map((blog) => (
+          <GlowCard key={blog.id} project={blog} />
         ))}
       </div>
     </section>
