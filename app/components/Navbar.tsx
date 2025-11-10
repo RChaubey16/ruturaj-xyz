@@ -1,13 +1,17 @@
-"use client"
+"use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Github, Menu, X } from "lucide-react";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { Logo } from "./Logo";
+import config from "../../data/config.json";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { nav } = config;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -15,6 +19,20 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const offset = 100; // distance from top after scroll
+    const top = section.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -25,14 +43,26 @@ const Navbar = () => {
 
         {/* Desktop Navigation - hidden on mobile */}
         <ul className="hidden md:flex justify-end items-center gap-4">
-          <li className="nav-link">
-            <Link href={"#experience"}>Experience</Link>
-          </li>
+          {pathname === "/" && (
+            <li className="nav-link">
+              <Link
+                href={"#experience"}
+                onClick={(e) => handleScroll(e, "experience")}
+              >
+                Experience
+              </Link>
+            </li>
+          )}
+
           <li className="nav-link">
             <Link href={"/builds"}>Builds</Link>
           </li>
           <li className="nav-link">
-            <Link href={"https://github.com/RChaubey16"}>
+            <Link href={"/gallery"}>Gallery</Link>
+          </li>
+
+          <li className="nav-link">
+            <Link href={nav.portfolio_github_repo} target="_blank">
               <Github />
             </Link>
           </li>
@@ -55,25 +85,35 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div 
+      <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="mt-4 pb-4 border-t border-gray-200 dark:border-gray-700">
           <ul className="flex flex-col gap-4 pt-4">
-            <li className="nav-link">
-              <Link href={"#experience"} onClick={closeMenu}>
-                Experience
-              </Link>
-            </li>
+            {pathname === "/" && (
+              <li className="nav-link">
+                <Link href={"#experience"} onClick={closeMenu}>
+                  Experience
+                </Link>
+              </li>
+            )}
             <li className="nav-link">
               <Link href={"/builds"} onClick={closeMenu}>
                 Builds
               </Link>
             </li>
             <li className="nav-link">
-              <Link href={"https://github.com/RChaubey16"} onClick={closeMenu}>
+              <Link href={"/gallery"}>Gallery</Link>
+            </li>
+
+            <li className="nav-link">
+              <Link
+                href={nav.portfolio_github_repo}
+                onClick={closeMenu}
+                target="_blank"
+              >
                 <div className="flex items-center gap-2">
                   <Github />
                   <span>GitHub</span>

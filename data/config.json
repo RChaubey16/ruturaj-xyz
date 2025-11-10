@@ -1,4 +1,7 @@
 {
+  "nav": {
+    "portfolio_github_repo": "https://github.com/RChaubey16/ruturaj-xyz"
+  },
   "tech": [
     {
       "id": "typescript",
@@ -347,8 +350,8 @@
         {
           "name": "Supabase",
           "href": "https://supabase.com",
-          "logoSrc": "/images/tech/supabase.png",
-          "darkLogoSrc": "/images/tech/supabase.png"
+          "logoSrc": "/images/tech/supabase-icon.png",
+          "darkLogoSrc": "/images/tech/supabase-icon.png"
         },
         {
           "name": "Postman",
