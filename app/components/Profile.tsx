@@ -72,7 +72,7 @@ const Profile = () => {
           src="/images/profile-cover.png"
           fill
           alt="banner"
-          className="object-cover rounded-sm"
+          className="object-contain md:object-cover rounded-sm"
         />
       </div>
       <div className="mt-8 flex items-center gap-4">
