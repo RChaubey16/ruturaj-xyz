@@ -6,8 +6,8 @@ export const projects: ProjectData[] = [
     id: "drupalcon-singapore-2024",
     type: "blogs",
     image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
-      alt: "banner",
+      src: "/images/blogs/singapore-blog.jpeg",
+      alt: "QED42 team at DrupalCon Singapore 2024",
     },
     status: { text: "Medium", className: "platform-medium" },
     title: "An internship, a community, and a ticket to DrupalCon",
@@ -30,7 +30,7 @@ export const projects: ProjectData[] = [
     id: "decoupled-drupal-101",
     type: "blogs",
     image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
+      src: "/images/blogs/decoupled-101.png",
       alt: "banner",
     },
     status: { text: "Medium", className: "platform-medium" },
@@ -60,7 +60,7 @@ export const projects: ProjectData[] = [
     id: "transform-api",
     type: "blogs",
     image: {
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg",
+      src: "/images/blogs/transform-api.png",
       alt: "banner",
     },
     status: { text: "Medium", className: "platform-medium" },

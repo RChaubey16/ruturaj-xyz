@@ -5,7 +5,7 @@ const IronMan = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div
       ref={ref}
-      className="hidden md:flex fixed top-[60%] right-50 items-center gap-2 hidden-slide"
+      className="hidden md:flex fixed top-[60%] right-[50%] items-center gap-2 z-50 hidden-slide"
     >
       <Image
         src="/assets/iron-man.gif"

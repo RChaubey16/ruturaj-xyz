@@ -69,7 +69,7 @@ const Profile = () => {
     <div className="pt-20 mb-20">
       <div className="relative w-full h-56">
         <Image
-          src="https://miro.medium.com/v2/resize:fit:1400/1*HRcVRb4AmLrt5E0gANvWcA.jpeg"
+          src="/images/profile-cover.png"
           fill
           alt="banner"
           className="object-cover rounded-sm"
