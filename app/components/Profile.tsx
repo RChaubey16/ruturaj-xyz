@@ -14,9 +14,7 @@ type Stack = {
 const { name, nameInMorseCode, techStacks, socials } = config.profile;
 
 const Profile = () => {
-  const frontendStacks = techStacks.slice(0, 3);
-  const backendStacks = techStacks.slice(3);
-
+  
   const renderStackLinks = (stacks: Stack[]) =>
     stacks.map((stack, index) => (
       <span key={stack.name}>
@@ -26,6 +24,7 @@ const Profile = () => {
         {index < stacks.length - 1 ? ", " : ""}
       </span>
     ));
+
   return (
     <div className="py-20">
       <div className="relative w-full h-56">
@@ -51,10 +50,11 @@ const Profile = () => {
         </div>
       </div>
       <p className="mt-4 mb-6 para-text">
-        I build fast, interactive front-ends with{" "}
-        {renderStackLinks(frontendStacks)} and solid back-ends powered by{" "}
-        {renderStackLinks(backendStacks)} — all with a focus on performance,
-        clarity, and maintainability.
+        I am a Full Stack Developer who builds scalable, high-performance web
+        apps with {renderStackLinks(techStacks)}.
+        <br />
+        Creating clean, testable, maintainable and functional code is the
+        highest priority.
       </p>
       <div className="md:border-t border-black/30 dark:border-gray-600 pt-4 mt-4 flex flex-col md:flex-row md:items-center justify-between">
         <div className="mt-2 mb-5 pb-5 md:mb-0 md:pb-0 flex gap-4 border-b md:border-none border-black/30 dark:border-gray-600">

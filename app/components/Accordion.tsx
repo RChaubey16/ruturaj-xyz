@@ -45,7 +45,7 @@ export function AccordionComponent() {
           <TechUsed tech={experience.full_stack_engineer.tech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.full_stack_engineer.work.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="mb-2.5">{item}</li>
             ))}
           </ul>
         </AccordionContent>
@@ -81,7 +81,7 @@ export function AccordionComponent() {
           <TechUsed tech={experience.associate_engineer.tech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.associate_engineer.work.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="mb-2.5">{item}</li>
             ))}
           </ul>
         </AccordionContent>
@@ -117,7 +117,7 @@ export function AccordionComponent() {
           <TechUsed tech={experience.intern.tech} />
           <ul className="list-disc list-inside marker:text-gray-600 dark:marker:text-gray-400">
             {experience.intern.work.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="mb-2.5">{item}</li>
             ))}
           </ul>
         </AccordionContent>
