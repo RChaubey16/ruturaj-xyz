@@ -54,10 +54,18 @@ const Navbar = () => {
             </li>
           )}
 
-          <li className="nav-link">
+          <li
+            className={`nav-link ${
+              pathname === "/builds" ? "underline font-semibold" : ""
+            }`}
+          >
             <Link href={"/builds"}>Builds</Link>
           </li>
-          <li className="nav-link">
+          <li
+            className={`nav-link ${
+              pathname === "/gallery" ? "underline font-semibold" : ""
+            }`}
+          >
             <Link href={"/gallery"}>Gallery</Link>
           </li>
 
@@ -99,12 +107,20 @@ const Navbar = () => {
                 </Link>
               </li>
             )}
-            <li className="nav-link">
+            <li
+              className={`nav-link ${
+                pathname === "/builds" ? "font-bold" : ""
+              }`}
+            >
               <Link href={"/builds"} onClick={closeMenu}>
                 Builds
               </Link>
             </li>
-            <li className="nav-link">
+            <li
+              className={`nav-link ${
+                pathname === "/gallery" ? "underline font-semibold" : ""
+              }`}
+            >
               <Link href={"/gallery"}>Gallery</Link>
             </li>
 

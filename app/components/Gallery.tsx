@@ -36,7 +36,7 @@ const Gallery = async ({ useButton = true }) => {
     })) ?? [];
 
   return (
-    <section id="gallery" className="my-22">
+    <section id="gallery" className="my-20">
       <h1 className="mb-2 heading">Gallery</h1>
 
       {useButton ? (

@@ -5,6 +5,7 @@ import Tech from "./components/Tech";
 import Gallery from "./components/Gallery";
 import Fade from "@/components/animation/Fade";
 import Blogs from "./components/Blogs";
+import ToastManager from "./components/ToastManager";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
         <div className="my-20 flex flex-wrap items-center gap-2">
           <Tech />
         </div>
+                
+        <ToastManager />
       </Fade>
     </section>
   );

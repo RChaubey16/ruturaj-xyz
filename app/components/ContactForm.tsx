@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -30,7 +29,7 @@ import {
   InputGroupTextarea,
 } from "@/components/ui/input-group";
 
-// ✅ Updated schema with email validation
+// Schema with form validation
 const formSchema = z.object({
   title: z
     .string()
@@ -68,9 +67,9 @@ export function ContactForm() {
     const result = await res.json();
 
     if (!result.data.data && result.data.error) {
-      toast("Unable to send your message, something went wrong");
+      toast.error("Unable to send your message, something went wrong");
     } else {
-      toast("Your message was sent");
+      toast.success("Your message was sent");
     }
     form.reset();
   }
@@ -106,8 +105,7 @@ export function ContactForm() {
                 </Field>
               )}
             />
-
-            {/* ✅ Email Field (Added Here) */}
+            {/* Email Field*/}
             <Controller
               name="email"
               control={form.control}

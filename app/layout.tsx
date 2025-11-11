@@ -26,7 +26,8 @@ const forum = Forum({
 
 export const metadata: Metadata = {
   title: "Ruturaj Chaubey",
-  description: "I build fast, interactive full stack web applications, all with a focus on performance, clarity, and maintainability.",
+  description:
+    "I build fast, interactive full stack web applications, all with a focus on performance, clarity, and maintainability.",
 };
 
 export default function RootLayout({
@@ -43,9 +44,11 @@ export default function RootLayout({
           <KeyquenceComponent />
           <Navbar />
           {children}
-          <Toaster theme="dark" position="top-right" />
-          <footer className="my-22 text-center">
-            <p className="para-text">Ruturaj Chaubey © 2025. All rights reserved.</p>
+          <Toaster theme="light" position="bottom-right" invert richColors />
+          <footer className="my-20 text-center">
+            <p className="para-text">
+              Ruturaj Chaubey © 2025. All rights reserved.
+            </p>
           </footer>
         </ThemeProvider>
       </body>

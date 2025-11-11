@@ -27,7 +27,7 @@ const Profile = () => {
       </span>
     ));
   return (
-    <div className="pt-20 mb-20">
+    <div className="py-20">
       <div className="relative w-full h-56">
         <Image
           src="/images/profile-cover.png"
