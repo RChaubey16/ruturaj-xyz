@@ -14,14 +14,17 @@ type Stack = {
 const { name, nameInMorseCode, techStacks, socials } = config.profile;
 
 const Profile = () => {
-  
   const renderStackLinks = (stacks: Stack[]) =>
     stacks.map((stack, index) => (
       <span key={stack.name}>
         <Link href={stack.href} className="link-text">
           {stack.name}
         </Link>
-        {index < stacks.length - 1 ? ", " : ""}
+        {index < stacks.length - 2
+          ? ", "
+          : index === stacks.length - 2
+          ? " & "
+          : ""}
       </span>
     ));
 
