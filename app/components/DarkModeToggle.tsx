@@ -3,6 +3,7 @@
 import { Moon, SunMedium } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef } from 'react';
+import { flushSync } from 'react-dom';
 
 export function DarkModeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -17,7 +18,21 @@ export function DarkModeToggle() {
   const isDark = resolvedTheme === 'dark';
 
   const toggle = () => {
-    setTheme(isDark ? 'light' : 'dark');
+    if (!document.startViewTransition) {
+      setTheme(isDark ? 'light' : 'dark');
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play().catch((err) => console.log('Audio play failed:', err));
+      }
+      return;
+    }
+
+    document.startViewTransition(() => {
+      flushSync(() => {
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    });
+
     if (audioRef.current) {
       audioRef.current.currentTime = 0;
       audioRef.current.play().catch((err) => console.log('Audio play failed:', err));
