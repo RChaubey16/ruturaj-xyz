@@ -23,9 +23,10 @@ export default function ToastManager() {
     {
       toastContent: (
         <div className="flex items-center gap-2 font-montserrat">
-          <WandSparkles className="size-5.5 shrink-0" />
+          <Telescope className="size-5.5 shrink-0" />
           <span className="text-gray-400">
-            Try typing <strong className="text-white italic">ironman</strong>, you’re in for a surprise!
+            Ever wondered what happens if you type{" "}
+            <strong className="text-white italic">Christmas</strong>? Try it.
           </span>
         </div>
       ),
@@ -33,31 +34,17 @@ export default function ToastManager() {
       timeDelay: 10000,
       toastType: "message" as const,
     },
-    {
+     {
       toastContent: (
         <div className="flex items-center gap-2 font-montserrat">
-          <Telescope className="size-5.5 shrink-0" />
+          <WandSparkles className="size-5.5 shrink-0" />
           <span className="text-gray-400">
-            Ever wondered what happens if you type{" "}
-            <strong className="text-white italic">hello</strong>? Try it.
+            Try typing <strong className="text-white italic">ironman</strong>, you’re in for a surprise!
           </span>
         </div>
       ),
       toastDuration: 5000,
-      timeDelay: 25000,
-      toastType: "message" as const,
-    },
-    {
-      toastContent: (
-        <div className="flex items-center gap-2 font-montserrat">
-          <VolumeX className="size-5.5 shrink-0" />
-          <span className="text-gray-400">
-            🔇 Press <strong className="text-white italic">Esc</strong> to stop the music.
-          </span>
-        </div>
-      ),
-      toastDuration: 5000,
-      timeDelay: 28000,
+      timeDelay: 30000,
       toastType: "message" as const,
     },
   ];
